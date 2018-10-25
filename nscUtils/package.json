@@ -1,0 +1,30 @@
+{
+  "name": "nscutils",
+  "version": "1.0.1",
+  "description": "some utils",
+  "main": "lib/index.js",
+  "scripts": {
+    "compile": "babel -d lib/ src/",
+    "prepublish": "npm run compile",
+    "server": "node app.babel.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NorthSeacoder/npmPage.git"
+  },
+  "keywords": [
+    "util"
+  ],
+  "author": "NorthSeacoder",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NorthSeacoder/npmPage/issues"
+  },
+  "homepage": "https://github.com/NorthSeacoder/npmPage#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1"
+  },
+  "dependencies": {}
+}
