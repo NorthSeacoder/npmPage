@@ -98,7 +98,7 @@ class utilsString {
      * @param {String} val  要操作的字符串
      * @param {Number} len  保留小数位长度
      * @param {Boolean} fill  如果小数位长度不足是否需要补齐 default =true
-     * @returns {Number} 转换后的值
+     * @returns {String} 转换后的值
      */
     static toFixed(val, len, fill) {
         fill = !u.isBoolean(fill) ? true : fill;
@@ -120,7 +120,7 @@ class utilsString {
     /**
      * 删除前后空格
      * @param {String} val  要操作的字符串
-     * @returns {Number} 删除前后空格后的字符串
+     * @returns {String} 删除前后空格后的字符串
      */
     static trim(val) {
         return val.replace(/(^\s*)|(\s*$)/g, '');
