@@ -1,9 +1,4 @@
-﻿/*
-CDN:js.soufunimg.com/industry/commonjs/utils.min.js
-*/
-
-
-class u {
+﻿class u {
     static isNumeric(obj) {
         return !isNaN(parseFloat(obj)) && isFinite(obj);
     }

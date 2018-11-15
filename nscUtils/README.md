@@ -7,7 +7,7 @@ npm i nscutils
 ```
 
 ```javascript
-var Utils = require('nscutils');
+const Utils = require('nscutils');
 ```
 
 ## the utils for Array
@@ -15,7 +15,7 @@ var Utils = require('nscutils');
 ### sort
 
 ```javascript
-var Utils = require('nscutils');
+const Utils = require('nscutils');
 /**
  * @example utils.Array.order([{value:10},{value:20}],'desc','value')
  * @example utils.Array.order([10,20],'desc')
@@ -30,7 +30,7 @@ const res = Utils.Array.order(array, type, column);
 ### de-duplication
 
 ```javascript
-var Utils = require('nscutils');
+const Utils = require('nscutils');
 /**
  * @example utils.Array.unique([{name:'zs'},{name:'zs'}],'name')
  * @example utils.Array.unique([10,10])
@@ -46,7 +46,7 @@ const res = Utils.Array.unique(array, column);
 ### removeHTML
 
 ```javascript
-var Utils = require('nscutils');
+const Utils = require('nscutils');
 /**
  * @param {String} html
  * @returns {String}
@@ -58,7 +58,7 @@ const res = Utils.String.removeHTML(html);
 ### cut off string and append in the end
 
 ```javascript
-var Utils = require('nscutils');
+const Utils = require('nscutils');
 /**
  *  subString(`sadfsdafsd`,2,'...')
  * @param {String} val
@@ -73,7 +73,7 @@ const res = Utils.String.subString(val, len, suffix);
 ### String->Float
 
 ```javascript
-var Utils = require('nscutils');
+const Utils = require('nscutils');
 /**
  * @param {String} val
  * @param {Number} len  decimal length
@@ -88,7 +88,7 @@ const res = Utils.String.toFixed(val, len, fill);
 ### delete f&p space
 
 ```javascript
-var Utils = require('nscutils');
+const Utils = require('nscutils');
 /**
  * @param {String} val
  * @returns {String}
@@ -100,7 +100,7 @@ const res = Utils.String.trim(val);
 ### replaceAll
 
 ```javascript
-var Utils = require('nscutils');
+const Utils = require('nscutils');
 /**
  * @param {String} val
  * @param {String} replacestr
@@ -114,7 +114,7 @@ const res = Utils.String.replaceAll(val, replacestr, newstr);
 ### String->Date
 
 ```javascript
-var Utils = require('nscutils');
+const Utils = require('nscutils');
 /**
  * @param {String} val
  * @param {String} split  '-'|'/'|... required default '-'
@@ -129,7 +129,7 @@ const res = Utils.String.toDate(val, split);
 ### format
 
 ```javascript
-var Utils = require('nscutils');
+const Utils = require('nscutils');
 /**
  * @param {Date} date
  * @param {String} fmt   yyyy-MM-dd
@@ -152,7 +152,7 @@ const res = Utils.Date.format(date, fmt);
 ### copy
 
 ```javascript
-var Utils = require('nscutils');
+const Utils = require('nscutils');
 /**
  * @param {Boolean} isDeep
  * @param {Object/Array} target
@@ -171,7 +171,7 @@ const res = Utils.Object.extend(isDeep,target,src...);
 ### rgb->binary
 
 ```javascript
-var Utils = require('nscutils');
+const Utils = require('nscutils');
 /**
  * @param {String} color
  * @returns {String}
