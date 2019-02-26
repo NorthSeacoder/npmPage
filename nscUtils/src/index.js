@@ -17,8 +17,6 @@
  * @description 数组操作类
  */
 class utilsArray {
-
-
     /**
      * @description 数组排序
      * @example utils.Array.order([{value:10},{value:20}],'desc','value')
@@ -173,6 +171,29 @@ class utilsDate {
             if (new RegExp("(" + k + ")").test(fmt))
                 fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
         return fmt;
+    }
+    /**
+     * @param {any} date 结束时间2019-01-08 00:00:00
+     * @returns  
+     * 
+     * @memberOf utilsDate
+     */
+    static Countdown(date) {
+        const now = new Date();
+        const to = new Date(date)
+        let second = to.getTime() - now.getTime();
+        if (second <= 0) return '已结束';
+        let selfSecond = second;
+        const day = Number.parseInt(selfSecond / (1000 * 3600 * 24), 10);
+        selfSecond %= 1000 * 3600 * 24; //除去整天之后剩余的时间
+        const hour = Number.parseInt(selfSecond / (1000 * 3600), 10);
+        selfSecond %= 1000 * 3600; //除去整小时之后剩余的时间
+        const minute = Number.parseInt(selfSecond / (1000 * 60), 10);
+        selfSecond %= 1000 * 60; //除去整分钟之后剩余的时间
+        return `${day}days${hour}hours${minute}minutes${Number.parseInt(
+          selfSecond / 1000,
+          10
+        )}seconds`;
     }
 }
 /**
